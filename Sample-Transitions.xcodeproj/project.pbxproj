@@ -13,11 +13,11 @@
 		5F4A05261E5B184800C4FF1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F4A05251E5B184800C4FF1D /* Assets.xcassets */; };
 		5F4A05291E5B184800C4FF1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4A05271E5B184800C4FF1D /* LaunchScreen.storyboard */; };
 		5F4A05341E5B184900C4FF1D /* Sample_TransitionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A05331E5B184900C4FF1D /* Sample_TransitionsTests.swift */; };
-		5F4A05501E5B191200C4FF1D /* CustomTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A054B1E5B191200C4FF1D /* CustomTransitions.swift */; };
-		5F4A05511E5B191200C4FF1D /* GenericTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A054C1E5B191200C4FF1D /* GenericTransition.swift */; };
-		5F4A05521E5B191200C4FF1D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A054D1E5B191200C4FF1D /* Transition.swift */; };
-		5F4A05531E5B191200C4FF1D /* TransitionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A054E1E5B191200C4FF1D /* TransitionNavigationController.swift */; };
-		5F4A05541E5B191200C4FF1D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A054F1E5B191200C4FF1D /* TransitionViewController.swift */; };
+		5F4A055B1E5B1B8800C4FF1D /* CustomTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A05561E5B1B8800C4FF1D /* CustomTransitions.swift */; };
+		5F4A055C1E5B1B8800C4FF1D /* GenericTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A05571E5B1B8800C4FF1D /* GenericTransition.swift */; };
+		5F4A055D1E5B1B8800C4FF1D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A05581E5B1B8800C4FF1D /* Transition.swift */; };
+		5F4A055E1E5B1B8800C4FF1D /* TransitionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A05591E5B1B8800C4FF1D /* TransitionNavigationController.swift */; };
+		5F4A055F1E5B1B8800C4FF1D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A055A1E5B1B8800C4FF1D /* TransitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +41,11 @@
 		5F4A052F1E5B184800C4FF1D /* Sample-TransitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample-TransitionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4A05331E5B184900C4FF1D /* Sample_TransitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_TransitionsTests.swift; sourceTree = "<group>"; };
 		5F4A05351E5B184900C4FF1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F4A054B1E5B191200C4FF1D /* CustomTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitions.swift; sourceTree = "<group>"; };
-		5F4A054C1E5B191200C4FF1D /* GenericTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTransition.swift; sourceTree = "<group>"; };
-		5F4A054D1E5B191200C4FF1D /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
-		5F4A054E1E5B191200C4FF1D /* TransitionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionNavigationController.swift; sourceTree = "<group>"; };
-		5F4A054F1E5B191200C4FF1D /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		5F4A05561E5B1B8800C4FF1D /* CustomTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitions.swift; sourceTree = "<group>"; };
+		5F4A05571E5B1B8800C4FF1D /* GenericTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTransition.swift; sourceTree = "<group>"; };
+		5F4A05581E5B1B8800C4FF1D /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		5F4A05591E5B1B8800C4FF1D /* TransitionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionNavigationController.swift; sourceTree = "<group>"; };
+		5F4A055A1E5B1B8800C4FF1D /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,22 +110,21 @@
 		5F4A053E1E5B188500C4FF1D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5F4A054A1E5B191200C4FF1D /* Transitions */,
+				5F4A05551E5B1B8800C4FF1D /* Transitions */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		5F4A054A1E5B191200C4FF1D /* Transitions */ = {
+		5F4A05551E5B1B8800C4FF1D /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				5F4A054B1E5B191200C4FF1D /* CustomTransitions.swift */,
-				5F4A054C1E5B191200C4FF1D /* GenericTransition.swift */,
-				5F4A054D1E5B191200C4FF1D /* Transition.swift */,
-				5F4A054E1E5B191200C4FF1D /* TransitionNavigationController.swift */,
-				5F4A054F1E5B191200C4FF1D /* TransitionViewController.swift */,
+				5F4A05561E5B1B8800C4FF1D /* CustomTransitions.swift */,
+				5F4A05571E5B1B8800C4FF1D /* GenericTransition.swift */,
+				5F4A05581E5B1B8800C4FF1D /* Transition.swift */,
+				5F4A05591E5B1B8800C4FF1D /* TransitionNavigationController.swift */,
+				5F4A055A1E5B1B8800C4FF1D /* TransitionViewController.swift */,
 			);
-			name = Transitions;
-			path = ../../../Transitions;
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,12 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F4A05531E5B191200C4FF1D /* TransitionNavigationController.swift in Sources */,
-				5F4A05521E5B191200C4FF1D /* Transition.swift in Sources */,
-				5F4A05501E5B191200C4FF1D /* CustomTransitions.swift in Sources */,
+				5F4A055E1E5B1B8800C4FF1D /* TransitionNavigationController.swift in Sources */,
+				5F4A055D1E5B1B8800C4FF1D /* Transition.swift in Sources */,
+				5F4A055B1E5B1B8800C4FF1D /* CustomTransitions.swift in Sources */,
 				5F4A05211E5B184800C4FF1D /* ViewController.swift in Sources */,
-				5F4A05511E5B191200C4FF1D /* GenericTransition.swift in Sources */,
-				5F4A05541E5B191200C4FF1D /* TransitionViewController.swift in Sources */,
+				5F4A055C1E5B1B8800C4FF1D /* GenericTransition.swift in Sources */,
+				5F4A055F1E5B1B8800C4FF1D /* TransitionViewController.swift in Sources */,
 				5F4A051F1E5B184800C4FF1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

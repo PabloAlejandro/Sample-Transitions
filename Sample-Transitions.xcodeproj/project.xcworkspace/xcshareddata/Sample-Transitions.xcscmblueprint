@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "79683877ADDAA1991F3FBE4A12BAAE058FB6F56A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93317497E1C44C3EE4FB5674D1E6C1C5518BD153" : 9223372036854775807,
+    "79683877ADDAA1991F3FBE4A12BAAE058FB6F56A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4830C67D-9513-4E71-9FD1-B681915C39F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93317497E1C44C3EE4FB5674D1E6C1C5518BD153" : "Sample-Transitions\/Sample-Transitions\/Modules\/Transitions\/",
+    "79683877ADDAA1991F3FBE4A12BAAE058FB6F56A" : "Sample-Transitions\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sample-Transitions",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sample-Transitions.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PabloAlejandro\/Sample-Transitions.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79683877ADDAA1991F3FBE4A12BAAE058FB6F56A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PabloAlejandro\/Transitions.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93317497E1C44C3EE4FB5674D1E6C1C5518BD153"
+    }
+  ]
+}
