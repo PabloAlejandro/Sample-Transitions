@@ -35,3 +35,22 @@ class TransitionViewController: UIViewController {
         }
     }
 }
+
+extension TransitionViewController: Transition {
+    
+    var interactive: Bool {
+        return transition?.interactive ?? false
+    }
+    
+    func update(progress: Float) {
+        transition?.update(progress: progress)
+    }
+    
+    func complete() {
+        transition?.complete()
+    }
+    
+    func cancel() {
+        transition?.cancel()
+    }
+}

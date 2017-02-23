@@ -14,7 +14,7 @@ import UIKit
 
 class TransitionNavigationController: UINavigationController {
 
-    private(set) var transition: NavigationTransition?
+    fileprivate var transition: NavigationTransition?
     
     var transitionConfiguration: TransitionConfiguration! {
         didSet {
@@ -36,7 +36,7 @@ class TransitionNavigationController: UINavigationController {
     
     func pushViewController(_ viewController: UIViewController, withBlock pushBlock: @escaping TransitionBlock) {
         if let transition = transition {
-        transition.push(viewController: viewController, withBlock: pushBlock)
+            transition.push(viewController: viewController, withBlock: pushBlock)
         } else {
             super.pushViewController(viewController, animated: true)
         }
@@ -48,5 +48,24 @@ class TransitionNavigationController: UINavigationController {
         } else {
              return super.popViewController(animated: true)
         }
+    }
+}
+
+extension TransitionNavigationController: Transition {
+
+    var interactive: Bool {
+        return transition?.interactive ?? false
+    }
+    
+    func update(progress: Float) {
+        transition?.update(progress: progress)
+    }
+    
+    func complete() {
+        transition?.complete()
+    }
+    
+    func cancel() {
+        transition?.cancel()
     }
 }

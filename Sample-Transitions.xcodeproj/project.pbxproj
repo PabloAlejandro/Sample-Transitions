@@ -18,6 +18,8 @@
 		5F4A055D1E5B1B8800C4FF1D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A05581E5B1B8800C4FF1D /* Transition.swift */; };
 		5F4A055E1E5B1B8800C4FF1D /* TransitionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A05591E5B1B8800C4FF1D /* TransitionNavigationController.swift */; };
 		5F4A055F1E5B1B8800C4FF1D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A055A1E5B1B8800C4FF1D /* TransitionViewController.swift */; };
+		5F96D3BC1E5B540400F19AC0 /* TransitionTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F96D3BB1E5B540400F19AC0 /* TransitionTabBarController.swift */; };
+		5F96D3BE1E5B5AAD00F19AC0 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F96D3BD1E5B5AAD00F19AC0 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		5F4A05581E5B1B8800C4FF1D /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		5F4A05591E5B1B8800C4FF1D /* TransitionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionNavigationController.swift; sourceTree = "<group>"; };
 		5F4A055A1E5B1B8800C4FF1D /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		5F96D3BB1E5B540400F19AC0 /* TransitionTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTabBarController.swift; sourceTree = "<group>"; };
+		5F96D3BD1E5B5AAD00F19AC0 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				5F4A053E1E5B188500C4FF1D /* Modules */,
 				5F4A051E1E5B184800C4FF1D /* AppDelegate.swift */,
 				5F4A05201E5B184800C4FF1D /* ViewController.swift */,
+				5F96D3BD1E5B5AAD00F19AC0 /* ViewController2.swift */,
 				5F4A05221E5B184800C4FF1D /* Main.storyboard */,
 				5F4A05251E5B184800C4FF1D /* Assets.xcassets */,
 				5F4A05271E5B184800C4FF1D /* LaunchScreen.storyboard */,
@@ -123,6 +128,7 @@
 				5F4A05581E5B1B8800C4FF1D /* Transition.swift */,
 				5F4A05591E5B1B8800C4FF1D /* TransitionNavigationController.swift */,
 				5F4A055A1E5B1B8800C4FF1D /* TransitionViewController.swift */,
+				5F96D3BB1E5B540400F19AC0 /* TransitionTabBarController.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -232,8 +238,10 @@
 			files = (
 				5F4A055E1E5B1B8800C4FF1D /* TransitionNavigationController.swift in Sources */,
 				5F4A055D1E5B1B8800C4FF1D /* Transition.swift in Sources */,
+				5F96D3BE1E5B5AAD00F19AC0 /* ViewController2.swift in Sources */,
 				5F4A055B1E5B1B8800C4FF1D /* CustomTransitions.swift in Sources */,
 				5F4A05211E5B184800C4FF1D /* ViewController.swift in Sources */,
+				5F96D3BC1E5B540400F19AC0 /* TransitionTabBarController.swift in Sources */,
 				5F4A055C1E5B1B8800C4FF1D /* GenericTransition.swift in Sources */,
 				5F4A055F1E5B1B8800C4FF1D /* TransitionViewController.swift in Sources */,
 				5F4A051F1E5B184800C4FF1D /* AppDelegate.swift in Sources */,
@@ -442,6 +450,7 @@
 				5F4A053A1E5B184900C4FF1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F4A053B1E5B184900C4FF1D /* Build configuration list for PBXNativeTarget "Sample-TransitionsTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +459,7 @@
 				5F4A053D1E5B184900C4FF1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

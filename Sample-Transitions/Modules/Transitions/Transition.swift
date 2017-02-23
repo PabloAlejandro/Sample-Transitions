@@ -82,10 +82,10 @@ protocol ViewTransition: Transition {
 }
 
 /**
- * Transition protocol for view controller presenting a new view controller
+ * Transition protocol for navigation controller presenting a new view controller
  * @method push(viewController:withBlock:): push new view controller inside
  * parent navigation controller
- * @method pop(withBlock:): pop current child view controller
+ * @method pop(viewController:withBlock:): pop current child view controller
  * @property navigationControllerDelegate: forwards UINavigationControllerDelegate's 
  * calls to any object that requires them, instead of setting the navigation
  * controller's delegate.
@@ -105,4 +105,27 @@ protocol NavigationTransition: Transition {
     weak var navigationControllerDelegate: UINavigationControllerDelegate? { get set }
     // NOTE: Do not try to set the delegate of the UINavigationController, 
     // use `navigationControllerDelegate` instead.
+}
+
+/**
+ * Transition protocol for view controller presenting a new view controller
+ * @method push(viewController:withBlock:): push new view controller inside
+ * parent navigation controller
+ * @method pop(withBlock:): pop current child view controller
+ * @property navigationControllerDelegate: forwards UINavigationControllerDelegate's
+ * calls to any object that requires them, instead of setting the navigation
+ * controller's delegate.
+ */
+protocol TabBarTransition: Transition {
+    
+    // Custom initializer with navigation view controller
+    init(withTabBarController: UITabBarController, configuration: TransitionConfiguration)
+    
+    // Push view controller on navigation controller
+    func select(viewController: UIViewController, withBlock showBlock: @escaping TransitionBlock)
+    
+    // Get calls from UINavigationControllerDelegate
+    weak var tabBarDelegate: UITabBarControllerDelegate? { get set }
+    // NOTE: Do not try to set the delegate of the UITabBarController,
+    // use `tabBarDelegate` instead.
 }

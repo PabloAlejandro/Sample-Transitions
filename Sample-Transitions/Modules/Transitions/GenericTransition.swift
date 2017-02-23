@@ -13,7 +13,7 @@ private let defaultCompletionSpeed = 0.99
 enum PresentationBaseType: Equatable {
     case view(viewController: UIViewController)
     case navigation(navigationController: UINavigationController)
-//    case tab(tabBarController: UITabBarController)
+    case tab(tabBarController: UITabBarController)
     // TODO: Add more possible transitions
     static func ==(lhs: PresentationBaseType, rhs: PresentationBaseType) -> Bool {
         switch (lhs, rhs) {
@@ -57,6 +57,9 @@ class GenericTransition: NSObject, Transition {
     // Forward UINavigationControllerDelegate calls
     weak var navigationControllerDelegate: UINavigationControllerDelegate?
     
+    // Forward UITabBarDelegate calls
+    weak var tabBarDelegate: UITabBarControllerDelegate?
+    
     // MARK - Init
     
     required init(withViewController viewController: UIViewController, configuration: TransitionConfiguration) {
@@ -76,6 +79,15 @@ class GenericTransition: NSObject, Transition {
         navigationController.delegate = self
     }
     
+    required init(withTabBarController tabBarController: UITabBarController, configuration: TransitionConfiguration) {
+        self.configuration = configuration
+        self.interactiveTransition = UIPercentDrivenInteractiveTransition()
+        self.interactiveTransition.completionSpeed = CGFloat(completionSpeed)
+        self.presentationBaseType = PresentationBaseType.tab(tabBarController: tabBarController)
+        super.init()
+        tabBarController.delegate = self
+    }
+    
     fileprivate func wireTo(viewController: UIViewController) {
         self.child = viewController
         self.child.transitioningDelegate = self
@@ -91,6 +103,7 @@ class GenericTransition: NSObject, Transition {
         switch presentationBaseType {
         case .view(let vc): return vc
         case .navigation(let nv): return nv
+        case .tab(let tab): return tab
         }
     }
 }
@@ -167,6 +180,76 @@ extension GenericTransition: NavigationTransition {
 //        navigationController.delegate = self
         // Pop navigation controller
         return navigationController.popViewController(animated: true)
+    }
+}
+
+// MARK: TabBarTransition
+
+extension GenericTransition: TabBarTransition {
+    
+    func select(viewController: UIViewController, withBlock showBlock: @escaping TransitionBlock) {
+        guard case .tab(let tabBarController) = presentationBaseType else { return }
+        // Set present block
+        self.presentBlock = showBlock
+        // Set pushing property to true
+        self.isPushing = true
+        // Wire child view controller and set delegates
+        wireTo(viewController: viewController)
+        // Present child view controller
+        tabBarController.selectedViewController = viewController
+    }
+}
+
+// MARK: UITabBarControllerDelegate
+
+extension GenericTransition: UITabBarControllerDelegate {
+
+    func tabBarController(_ tabBarController: UITabBarController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        switch configuration {
+        case .interactive(_, let interactionProperties):
+            switch interactionProperties.interaction {
+            case .all:
+                return (isPushing && presentBlock != nil) || (!isPushing && dismissBlock != nil) ? interactiveTransition : nil
+            case .present:
+                return (isPushing && presentBlock != nil) ? interactiveTransition : nil
+            default:
+                return nil
+            }
+        default:
+            return nil
+        }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentBlock != nil ? self : nil
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        return tabBarDelegate?.tabBarController?(tabBarController, shouldSelect: viewController) ?? true
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        tabBarDelegate?.tabBarController?(tabBarController, didSelect: viewController)
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController]) {
+        tabBarDelegate?.tabBarController?(tabBarController, willBeginCustomizing: viewControllers)
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, willEndCustomizing viewControllers: [UIViewController], changed: Bool) {
+        tabBarDelegate?.tabBarController?(tabBarController, willBeginCustomizing: viewControllers)
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didEndCustomizing viewControllers: [UIViewController], changed: Bool) {
+        tabBarDelegate?.tabBarController?(tabBarController, didEndCustomizing: viewControllers, changed: changed)
+    }
+    
+    func tabBarControllerSupportedInterfaceOrientations(_ tabBarController: UITabBarController) -> UIInterfaceOrientationMask {
+        return tabBarDelegate?.tabBarControllerSupportedInterfaceOrientations?(tabBarController) ?? .all
+    }
+    
+    func tabBarControllerPreferredInterfaceOrientationForPresentation(_ tabBarController: UITabBarController) -> UIInterfaceOrientation {
+        return tabBarDelegate?.tabBarControllerPreferredInterfaceOrientationForPresentation?(tabBarController) ?? .unknown
     }
 }
 

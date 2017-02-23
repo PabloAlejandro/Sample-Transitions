@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample_Transitions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -89,10 +89,69 @@
             </objects>
             <point key="canvasLocation" x="1832.8" y="790.25487256371821"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="Adc-Tb-mHp">
+            <objects>
+                <viewController id="kj0-Ew-9ne" customClass="ViewController2" customModule="Sample_Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EfA-xT-V9A"/>
+                        <viewControllerLayoutGuide type="bottom" id="pHl-S7-ivP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KGf-eA-nUg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih6-sj-ltz">
+                                <rect key="frame" x="82" y="63" width="211" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="JJc-Fr-eE4"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectTabCustomWithSender:" destination="kj0-Ew-9ne" eventType="touchUpInside" id="Loz-I2-ERZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.83921568629999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ih6-sj-ltz" secondAttribute="trailing" constant="66" id="BkR-28-V2q"/>
+                            <constraint firstItem="ih6-sj-ltz" firstAttribute="leading" secondItem="KGf-eA-nUg" secondAttribute="leadingMargin" constant="66" id="TDw-kf-Wa6"/>
+                            <constraint firstItem="ih6-sj-ltz" firstAttribute="top" secondItem="EfA-xT-V9A" secondAttribute="bottom" constant="43" id="svR-u9-eaa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="b4H-av-oNe"/>
+                    <navigationItem key="navigationItem" id="nhf-iO-2mp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9h-o7-PSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832.8" y="1528.785607196402"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="UcT-Ae-0AK">
+            <objects>
+                <viewController id="FyF-RD-RLs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gQr-48-6OG"/>
+                        <viewControllerLayoutGuide type="bottom" id="e7l-vt-LSe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LMu-E5-cDo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2392156869" green="0.67450982329999998" blue="0.96862745289999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Kkf-tA-uEW"/>
+                    <navigationItem key="navigationItem" id="qXl-6Q-JSy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbK-p9-eAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="2291"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Zif-F2-eTC">
             <objects>
-                <viewController storyboardIdentifier="navigationTransitionIdentifier" id="sPB-re-zeR" customClass="ViewController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="navigationTransitionIdentifier" id="sPB-re-zeR" customClass="ViewController" customModule="Sample_Transitions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DYg-OI-tCt"/>
                         <viewControllerLayoutGuide type="bottom" id="o8l-9Y-X5b"/>
@@ -144,7 +203,7 @@
         <!--View Controller-->
         <scene sceneID="7jK-ha-InQ">
             <objects>
-                <viewController storyboardIdentifier="viewTransitionIdentifier" id="PRE-Wv-5Ez" customClass="ViewController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewTransitionIdentifier" id="PRE-Wv-5Ez" customClass="ViewController" customModule="Sample_Transitions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hdh-zr-wOr"/>
                         <viewControllerLayoutGuide type="bottom" id="Fjh-ie-nID"/>
@@ -196,7 +255,7 @@
         <!--Item-->
         <scene sceneID="80m-qJ-Y6W">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="caN-Kv-WMy" customClass="TransitionNavigationController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="caN-Kv-WMy" customClass="TransitionNavigationController" customModule="Sample_Transitions" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="lu8-cR-ubF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6HT-Nu-kdm">
@@ -205,29 +264,32 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hwg-E4-mjK"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qjc-f5-eio"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePD-4h-jxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="900" y="791.15442278860576"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Transition Tab Bar Controller-->
         <scene sceneID="yBr-FX-ajw">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vfi-xy-Cdd" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vfi-xy-Cdd" customClass="TransitionTabBarController" customModule="Sample_Transitions" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Q23-Fj-q80">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="caN-Kv-WMy" kind="relationship" relationship="viewControllers" id="BQo-rw-hCy"/>
+                        <segue destination="kj0-Ew-9ne" kind="relationship" relationship="viewControllers" id="4ng-gK-dXH"/>
+                        <segue destination="FyF-RD-RLs" kind="relationship" relationship="viewControllers" id="OIF-Fb-8pg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lC-hB-VEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39.200000000000003" y="791.15442278860576"/>
+            <point key="canvasLocation" x="-530" y="1529"/>
         </scene>
     </scenes>
 </document>
