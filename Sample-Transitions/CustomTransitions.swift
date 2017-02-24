@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Transitions
 
 enum TransitionType {
     case fadeIn, fadeOut

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Transitions
 
 private let viewTransitionIdentifier: String = "viewTransitionIdentifier"
 private let navigationTransitionIdentifier: String = "navigationTransitionIdentifier"

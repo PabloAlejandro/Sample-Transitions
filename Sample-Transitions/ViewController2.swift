@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Transitions
 
 class ViewController2: UIViewController {
 

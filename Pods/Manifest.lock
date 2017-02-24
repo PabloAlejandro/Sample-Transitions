@@ -1,0 +1,12 @@
+PODS:
+  - Transitions (0.1.3)
+
+DEPENDENCIES:
+  - Transitions
+
+SPEC CHECKSUMS:
+  Transitions: f5594ec4b4b347e4f28078bd38256440070b4b62
+
+PODFILE CHECKSUM: 1d084a47ed5bb9d5b45418b5e9cd00175cd90b9f
+
+COCOAPODS: 1.2.0
